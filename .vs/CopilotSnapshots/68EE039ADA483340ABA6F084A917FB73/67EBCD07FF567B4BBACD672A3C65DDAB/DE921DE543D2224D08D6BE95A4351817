@@ -1,0 +1,39 @@
+﻿using MediatR;
+using Application.Todos.Queries.GetTodos;
+using Microsoft.AspNetCore.Mvc;
+using Application.Todos.Queries.GetTodoById;
+using Application.Contracts.Todos.Requests;
+using Application.Todos.Commands.CreateTodo;
+
+namespace Api.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class TodosController(IMediator mediator) : ControllerBase
+{
+	private readonly IMediator _mediator = mediator;
+
+	[HttpGet]
+	public async Task<IActionResult> GetTodos(CancellationToken cancellationToken)
+	{
+		var response = await _mediator.Send(new GetTodosQuery(), cancellationToken);
+		
+		return Ok(response);
+	}
+
+	[HttpGet("id/{id:guid}")]
+	public async Task<IActionResult> GetTodoById([FromRoute] Guid id, CancellationToken cancellationToken)
+	{
+		var response = await _mediator.Send(new GetTodoByIdQuery(id), cancellationToken);
+		
+		return Ok(response);
+	}
+
+	[HttpPost("add")]
+	public async Task<IActionResult> CreateTodo([FromBody] CreateTodoRequest request, CancellationToken cancellationToken)
+	{
+		var response = await _mediator.Send(new CreateTodoCommand(request.Title), cancellationToken);
+		
+		return Ok(response);
+	}
+}

@@ -1,0 +1,20 @@
+﻿using Application.Interfaces.Persistence;
+using Application.Todos.Commands.DeleateTodo;
+using MediatR;
+
+namespace Application.Todos.Commands.DeleteTodo;
+
+public class DeleteTodoCommandHandler(IApplicationDbContext context) : IRequestHandler<DeleteTodoCommand>
+{
+	private readonly IApplicationDbContext _context = context;
+
+	public async Task Handle(DeleteTodoCommand request, CancellationToken cancellationToken)
+	{
+		var todo = await _context.Todos.FindAsync([request.Id], cancellationToken)
+			?? throw new KeyNotFoundException($"Todo with Id {request.Id} not found.");
+
+		_context.Todos.Remove(todo);
+
+		await _context.SaveChangesAsync(cancellationToken);
+	}
+}
