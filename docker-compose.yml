@@ -3,14 +3,14 @@ services:
     image: ghcr.io/abdelrahmany25/todocqrs-api:latest
     container_name: backend
     ports:
-    - "8080:80"
+    - "8080:8080"
     networks:
       - app-net
     restart: unless-stopped
     depends_on:
       - sqlserver
     environment:
-      - Connectionstrings:DefaultConnection=Server=sqlserver;Database=TodoCQRS;User Id=sa;Password=${MSSQL_SA_PASSWORD};Integrated Security=True;Trust Server Certificate=True;
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TodoCQRS;User Id=sa;Password=${MSSQL_SA_PASSWORD};Integrated Security=True;Trust Server Certificate=True;
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
