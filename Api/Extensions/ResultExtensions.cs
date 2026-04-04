@@ -1,6 +1,3 @@
-using Application.Common.Abstractions;
-using Microsoft.AspNetCore.Mvc;
-
 namespace API.Extensions;
 
 public static class ResultExtensions

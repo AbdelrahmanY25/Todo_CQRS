@@ -1,8 +1,4 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Infrastructure.Presistance.Configuratiuons;
+﻿namespace Infrastructure.Presistance.Configuratiuons;
 
 public class TodoConfiguratiuons : IEntityTypeConfiguration<Todo>
 {

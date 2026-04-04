@@ -1,7 +1,3 @@
-using Application.Common.Abstractions;
-using Application.Contracts.Todos.Responses;
-using MediatR;
-
 namespace Application.Todos.Queries.GetTodoById;
 
 public sealed record GetTodoByIdQuery(Guid Id) : IRequest<Result<TodoResponse>>;

@@ -1,7 +1,4 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-
-namespace Application.Interfaces.Persistence;
+﻿namespace Application.Interfaces.Persistence;
 
 public interface IApplicationDbContext
 {

@@ -1,13 +1,3 @@
-using API.Extensions;
-using Application.Contracts.Todos.Requests;
-using Application.Todos.Commands.CreateTodo;
-using Application.Todos.Commands.DeleteTodo;
-using Application.Todos.Commands.UpdateTodo;
-using Application.Todos.Queries.GetTodoById;
-using Application.Todos.Queries.GetTodos;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-
 namespace Api.Controllers;
 
 [Route("api/[controller]")]
@@ -19,17 +9,17 @@ public class TodosController(IMediator mediator) : ControllerBase
 	[HttpGet]
 	public async Task<IActionResult> GetTodos(CancellationToken cancellationToken)
 	{
-		var result = await _mediator.Send(new GetTodosQuery(), cancellationToken);
+		var result = await _mediator
+			.Send(new GetTodosQuery(), cancellationToken);
 
-		return result.IsSuccess
-			? Ok(result.Value)
-			: result.ToProblem();
+		return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
 	}
 
 	[HttpGet("id/{id:guid}")]
 	public async Task<IActionResult> GetTodoById([FromRoute] Guid id, CancellationToken cancellationToken)
 	{
-		var result = await _mediator.Send(new GetTodoByIdQuery(id), cancellationToken);
+		var result = await _mediator
+			.Send(new GetTodoByIdQuery(id), cancellationToken);
 
 		return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
 	}
@@ -37,30 +27,27 @@ public class TodosController(IMediator mediator) : ControllerBase
 	[HttpPost()]
 	public async Task<IActionResult> CreateTodo([FromBody] CreateTodoRequest request, CancellationToken cancellationToken)
 	{
-		var result = await _mediator.Send(new CreateTodoCommand(request.Title), cancellationToken);
+		var result = await _mediator
+			.Send(new CreateTodoCommand(request.Title), cancellationToken);
 
-		return result.IsSuccess
-			? Ok(result.Value)
-			: result.ToProblem();
+		return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
 	}
 
 	[HttpPut("{id:guid}")]
 	public async Task<IActionResult> UpdateTodo([FromRoute] Guid id, [FromBody] UpdateTodoRequest request, CancellationToken cancellationToken)
 	{
-		var result = await _mediator.Send(new UpdateTodoCommand(id, request.Title, request.IsCompleted), cancellationToken);
+		var result = await _mediator
+			.Send(new UpdateTodoCommand(id, request.Title, request.IsCompleted), cancellationToken);
 
-		return result.IsSuccess
-			? NoContent()
-			: result.ToProblem();
+		return result.IsSuccess ? NoContent() : result.ToProblem();
 	}
 
 	[HttpDelete("{id:guid}")]
 	public async Task<IActionResult> DeleteTodo([FromRoute] Guid id, CancellationToken cancellationToken)
 	{
-		var result = await _mediator.Send(new DeleteTodoCommand(id), cancellationToken);
+		var result = await _mediator
+			.Send(new DeleteTodoCommand(id), cancellationToken);
 
-		return result.IsSuccess
-			? NoContent()
-			: result.ToProblem();
+		return result.IsSuccess ? NoContent() : result.ToProblem();
 	}
 }

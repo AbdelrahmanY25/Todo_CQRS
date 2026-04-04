@@ -1,16 +1,15 @@
-using Application.Interfaces.Persistence;
-using FluentValidation;
-using Infrastructure.Presistance;
-using Microsoft.EntityFrameworkCore;
-using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
 
-builder.Services.AddDbContext<ApplicationDbContext>(op => op.UseSqlite("Data Source=app.db"));
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+builder.Services.AddProblemDetails();  
+
+builder.Services
+	.AddDbContext<ApplicationDbContext>(op => op.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
@@ -28,6 +27,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseExceptionHandler();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

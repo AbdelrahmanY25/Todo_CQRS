@@ -1,9 +1,3 @@
-using Application.Common.Abstractions;
-using Application.Common.Errors.TodosErrors;
-using Application.Contracts.Todos.Responses;
-using Application.Interfaces.Persistence;
-using MediatR;
-
 namespace Application.Todos.Queries.GetTodoById;
 
 public class GetTodoByIdQueryHandler(IApplicationDbContext context) : IRequestHandler<GetTodoByIdQuery, Result<TodoResponse>>
@@ -12,8 +6,10 @@ public class GetTodoByIdQueryHandler(IApplicationDbContext context) : IRequestHa
 
 	public async Task<Result<TodoResponse>> Handle(GetTodoByIdQuery request, CancellationToken cancellationToken)
 	{
-		var todo = await _context.Todos.FindAsync([request.Id], cancellationToken);
-
+		var todo = await _context.Todos
+			.AsNoTracking()
+			.FirstOrDefaultAsync(t => t.Id == request.Id, cancellationToken);
+		
 		if (todo is null)
 			return Result.Failure<TodoResponse>(TodoErrors.NotFound);
 

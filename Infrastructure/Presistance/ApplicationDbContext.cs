@@ -1,8 +1,4 @@
-﻿using Application.Interfaces.Persistence;
-using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-
-namespace Infrastructure.Presistance;
+﻿namespace Infrastructure.Presistance;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options), IApplicationDbContext
 {

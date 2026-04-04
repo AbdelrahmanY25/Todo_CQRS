@@ -1,8 +1,3 @@
-using Application.Common.Abstractions;
-using Application.Common.Errors.TodosErrors;
-using Application.Interfaces.Persistence;
-using MediatR;
-
 namespace Application.Todos.Commands.DeleteTodo;
 
 public class DeleteTodoCommandHandler(IApplicationDbContext context) : IRequestHandler<DeleteTodoCommand, Result>

@@ -1,7 +1,3 @@
-using Application.Common.Abstractions;
-using Application.Interfaces.Persistence;
-using MediatR;
-
 namespace Application.Todos.Commands.CreateTodo;
 
 public class CreateTodoCommandHandler(IApplicationDbContext context) : IRequestHandler<CreateTodoCommand, Result<Guid>>

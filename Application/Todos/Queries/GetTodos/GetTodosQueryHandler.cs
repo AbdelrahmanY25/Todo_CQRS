@@ -1,9 +1,3 @@
-using Application.Common.Abstractions;
-using Application.Contracts.Todos.Responses;
-using Application.Interfaces.Persistence;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-
 namespace Application.Todos.Queries.GetTodos;
 
 public class GetTodosQueryHandler(IApplicationDbContext context) : IRequestHandler<GetTodosQuery, Result<IEnumerable<TodoResponse>>>
@@ -13,6 +7,7 @@ public class GetTodosQueryHandler(IApplicationDbContext context) : IRequestHandl
 	public async Task<Result<IEnumerable<TodoResponse>>> Handle(GetTodosQuery request, CancellationToken cancellationToken)
 	{
 		var response = await _context.Todos
+			.AsNoTracking()
 			.Select(t => new TodoResponse
 				(
 					t.Id,
