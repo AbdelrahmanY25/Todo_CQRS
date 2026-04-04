@@ -10,7 +10,7 @@ services:
     depends_on:
       - sqlserver
     environment:
-      - Connectionstrings:DefaultConnection=Server=sqlserver;Database=TodoCQRS;User Id=sa;Password=ASJaq@33kksi782h;Integrated Security=True;Trust Server Certificate=True;
+      - Connectionstrings:DefaultConnection=Server=sqlserver;Database=TodoCQRS;User Id=sa;Password=${MSSQL_SA_PASSWORD};Integrated Security=True;Trust Server Certificate=True;
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -23,7 +23,7 @@ services:
     hostname: sqlserver
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=ASJaq@33kksi782h
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
     volumes:
       - sqlserver-data:/var/opt/mssql
 

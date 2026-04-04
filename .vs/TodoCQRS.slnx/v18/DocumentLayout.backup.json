@@ -3,23 +3,7 @@
   "WorkspaceRootPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|d:\\my_projects\\back end c# asp .net\\rest api projects\\crud_usings_cqrs\\infrastructure\\presistance\\migrations\\20260403184602_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\presistance\\migrations\\20260403184602_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\AppData\\Roaming\\Microsoft\\UserSecrets\\90b79f7a-a1cc-4022-adb2-a29a868d642e\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21E7A4F1-06DC-438B-AD08-47F0566E945F}|API\\API.csproj|d:\\my_projects\\back end c# asp .net\\rest api projects\\crud_usings_cqrs\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21E7A4F1-06DC-438B-AD08-47F0566E945F}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\my_projects\\back end c# asp .net\\rest api projects\\crud_usings_cqrs\\application\\todos\\queries\\gettodobyid\\gettodobyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\todos\\queries\\gettodobyid\\gettodobyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|d:\\my_projects\\back end c# asp .net\\rest api projects\\crud_usings_cqrs\\application\\todos\\queries\\gettodos\\gettodosqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\todos\\queries\\gettodos\\gettodosqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21E7A4F1-06DC-438B-AD08-47F0566E945F}|API\\API.csproj|d:\\my_projects\\back end c# asp .net\\rest api projects\\crud_usings_cqrs\\api\\controllers\\todoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,78 +34,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20260403184602_Initial.cs",
-              "DocumentMoniker": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Infrastructure\\Presistance\\Migrations\\20260403184602_Initial.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Presistance\\Migrations\\20260403184602_Initial.cs",
-              "ToolTip": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Infrastructure\\Presistance\\Migrations\\20260403184602_Initial.cs",
-              "RelativeToolTip": "Infrastructure\\Presistance\\Migrations\\20260403184602_Initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T18:46:02.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Api\\Program.cs",
-              "RelativeDocumentMoniker": "Api\\Program.cs",
-              "ToolTip": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Api\\Program.cs",
-              "RelativeToolTip": "Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T18:38:08.847Z",
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Roaming\\Microsoft\\UserSecrets\\90b79f7a-a1cc-4022-adb2-a29a868d642e\\secrets.json",
+              "ToolTip": "C:\\Users\\ASUS\\AppData\\Roaming\\Microsoft\\UserSecrets\\90b79f7a-a1cc-4022-adb2-a29a868d642e\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-03T18:51:08.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\ASUS\\AppData\\Roaming\\Microsoft\\UserSecrets\\90b79f7a-a1cc-4022-adb2-a29a868d642e\\secrets.json",
-              "ToolTip": "C:\\Users\\ASUS\\AppData\\Roaming\\Microsoft\\UserSecrets\\90b79f7a-a1cc-4022-adb2-a29a868d642e\\secrets.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-03T18:35:09.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetTodosQueryHandler.cs",
-              "DocumentMoniker": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Todos\\Queries\\GetTodos\\GetTodosQueryHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Todos\\Queries\\GetTodos\\GetTodosQueryHandler.cs",
-              "ToolTip": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Todos\\Queries\\GetTodos\\GetTodosQueryHandler.cs",
-              "RelativeToolTip": "Application\\Todos\\Queries\\GetTodos\\GetTodosQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T12:28:35.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetTodoByIdQueryHandler.cs",
-              "DocumentMoniker": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Todos\\Queries\\GetTodoById\\GetTodoByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Todos\\Queries\\GetTodoById\\GetTodoByIdQueryHandler.cs",
-              "ToolTip": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Todos\\Queries\\GetTodoById\\GetTodoByIdQueryHandler.cs",
-              "RelativeToolTip": "Application\\Todos\\Queries\\GetTodoById\\GetTodoByIdQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T12:22:49.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "TodosController.cs",
               "DocumentMoniker": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Api\\Controllers\\TodosController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\TodosController.cs",
               "ToolTip": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Api\\Controllers\\TodosController.cs",
               "RelativeToolTip": "Api\\Controllers\\TodosController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T12:20:35.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T12:20:35.934Z"
             }
           ]
         }

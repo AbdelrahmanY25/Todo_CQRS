@@ -9,6 +9,6 @@ public class CreateTodoValidator : AbstractValidator<CreateTodoRequest>
 	{
 		RuleFor(x => x.Title)
 			.NotEmpty()
-			.MaximumLength(2);
+			.MaximumLength(200);
 	}
 }
