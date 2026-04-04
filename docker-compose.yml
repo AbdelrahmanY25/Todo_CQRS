@@ -1,6 +1,5 @@
 services:
   api:
-    # image: ghcr.io/abdelrahmany25/todo_cqrs/api:latest
     build: .
     container_name: backend
     ports:
@@ -11,7 +10,7 @@ services:
     depends_on:
       - sqlserver
     environment:
-      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TodoCQRS;User Id=sa;Password=${MSSQL_SA_PASSWORD};Integrated Security=True;Trust Server Certificate=True;
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TodoCQRS;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True;
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
