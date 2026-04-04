@@ -5,6 +5,10 @@ on:
     branches:
       - main # Triggers on push to main
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -25,7 +29,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/abdelrahmany25/todocqrs-api:latest
+          tags: ghcr.io/abdelrahmany25/todo_cqrs/api:latest
 
   deploy-to-vps:
     needs: build-and-push

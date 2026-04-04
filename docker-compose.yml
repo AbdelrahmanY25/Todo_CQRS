@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/abdelrahmany25/todocqrs-api:latest
+    image: ghcr.io/abdelrahmany25/todo_cqrs/api:latest
     container_name: backend
     ports:
     - "8080:8080"
