@@ -3,69 +3,23 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main # Triggers on push to main
-
-permissions:
-  contents: read
-  packages: write
+      - main
 
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }} # Built-in GitHub token
-
-      - name: Build and push ASP.NET Core image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ghcr.io/abdelrahmany25/todo_cqrs/api:latest
-
   deploy-to-vps:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Copy docker-compose.yml to VPS
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          source: "docker-compose.yml"
-          target: "~/TodoCQRS"
-
-      - name: Execute deployment commands via SSH
+      - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            mkdir -p ~/TodoCQRS
-            cd ~/TodoCQRS
-            
-            # 1. Log in to GHCR on the VPS so it can pull the private image
-            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            
-            # 2. Dynamically create the .env file strictly on the server using secrets
+            mkdir -p ~/Todo_CQRS
+            cd ~/Todo_CQRS
+            git pull origin main
             echo "MSSQL_SA_PASSWORD=${{ secrets.MSSQL_SA_PASSWORD }}" > .env
-            
-            # 3. Pull the latest image and restart the containers
             docker compose pull
             docker compose up -d
-            
-            # 4. Clean up old unused images to save disk space
-            docker image prune -f
