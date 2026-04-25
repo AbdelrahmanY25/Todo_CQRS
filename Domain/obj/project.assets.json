@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Domain\\Domain.csproj",
+      "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Domain\\obj\\",
+      "outputPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

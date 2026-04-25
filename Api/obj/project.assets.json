@@ -3460,11 +3460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\API\\API.csproj",
+      "projectUniqueName": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\API\\API.csproj",
+      "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\API\\API.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\API\\obj\\",
+      "outputPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3485,11 +3485,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Application.csproj": {
-              "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Application.csproj"
+            "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Application\\Application.csproj": {
+              "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Application\\Application.csproj"
             },
-            "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Infrastructure\\Infrastructure.csproj"
+            "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

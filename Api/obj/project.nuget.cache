@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2aTX5yQ0kTY=",
+  "dgSpecHash": "+eZWoA/uuJc=",
   "success": true,
-  "projectFilePath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\API\\API.csproj",
+  "projectFilePath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

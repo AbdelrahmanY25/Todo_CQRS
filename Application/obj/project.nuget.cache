@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4NRgS1M+IuA=",
+  "dgSpecHash": "pJGEnj7Uftc=",
   "success": true,
-  "projectFilePath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\CRUD_Usings_CQRS\\Application\\Application.csproj",
+  "projectFilePath": "D:\\My_Projects\\Back End C# Asp .Net\\Rest API Projects\\Todo_Usings_CQRS\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",

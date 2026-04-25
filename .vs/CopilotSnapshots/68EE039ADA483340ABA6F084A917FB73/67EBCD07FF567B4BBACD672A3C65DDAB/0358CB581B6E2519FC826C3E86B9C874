@@ -1,5 +1,0 @@
-﻿using MediatR;
-
-namespace Application.Todos.Commands.DeleateTodo;
-
-public sealed record DeleteTodoCommand(Guid Id) : IRequest;
