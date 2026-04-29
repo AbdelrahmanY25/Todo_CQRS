@@ -6,18 +6,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
-builder.Services.AddProblemDetails();  
-
-builder.Services.AddCors(options =>
-{
-	options.AddDefaultPolicy(policy =>
-	{
-		policy
-			.WithOrigins(builder.Configuration.GetSection("AllowedOrigins").Get<string[]>()!)
-			.AllowAnyMethod()
-			.AllowAnyHeader();
-	});
-});
+builder.Services.AddProblemDetails();
 
 builder.Services
 	.AddDbContext<ApplicationDbContext>(op => op.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -40,8 +29,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseExceptionHandler();
-
-app.UseCors();
 
 app.UseAuthentication();
 
