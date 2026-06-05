@@ -1,3 +1,5 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -19,6 +21,10 @@ builder.Services
 	.AddFluentValidationAutoValidation()
 	.AddValidatorsFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
 
+builder.Host.UseSerilog((context, configuration) => 
+	configuration.ReadFrom.Configuration(context.Configuration)
+);
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -29,6 +35,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseExceptionHandler();
+
+app.UseSerilogRequestLogging();
 
 app.UseAuthentication();
 

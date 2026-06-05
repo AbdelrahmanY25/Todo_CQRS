@@ -8,7 +8,6 @@ public class GetTodosQueryHandler(IApplicationDbContext context) : IRequestHandl
 	{
 		var response = await _context.Todos
 			.AsNoTracking()
-			.Where(t => t.IsCompleted)
 			.OrderBy(t => t.Title)
 			.Select(t => new TodoResponse
 				(
