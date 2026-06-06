@@ -1,3 +1,3 @@
 namespace Application.Todos.Commands.UpdateTodo;
 
-public sealed record UpdateTodoCommand(Guid Id, string Title, bool IsCompleted) : IRequest<Result>;
+public sealed record UpdateTodoCommand(Guid Id, string Title, bool IsCompleted) : ICommand;

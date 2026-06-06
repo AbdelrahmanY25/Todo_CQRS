@@ -1,6 +1,6 @@
 namespace Application.Todos.Commands.DeleteTodo;
 
-public class DeleteTodoCommandHandler(IApplicationDbContext context) : IRequestHandler<DeleteTodoCommand, Result>
+public class DeleteTodoCommandHandler(IApplicationDbContext context) : ICommandHandler<DeleteTodoCommand>
 {
 	private readonly IApplicationDbContext _context = context;
 

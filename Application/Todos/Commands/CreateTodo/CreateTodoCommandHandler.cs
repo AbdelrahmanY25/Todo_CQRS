@@ -1,6 +1,6 @@
 namespace Application.Todos.Commands.CreateTodo;
 
-public class CreateTodoCommandHandler(IApplicationDbContext context) : IRequestHandler<CreateTodoCommand, Result<Guid>>
+public class CreateTodoCommandHandler(IApplicationDbContext context) : ICommandHandler<CreateTodoCommand, Guid>
 {
 	private readonly IApplicationDbContext _context = context;
 

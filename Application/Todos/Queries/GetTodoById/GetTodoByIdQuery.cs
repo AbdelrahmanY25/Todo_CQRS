@@ -1,3 +1,3 @@
 namespace Application.Todos.Queries.GetTodoById;
 
-public sealed record GetTodoByIdQuery(Guid Id) : IRequest<Result<TodoResponse>>;
+public sealed record GetTodoByIdQuery(Guid Id) : IQuery<TodoResponse>;

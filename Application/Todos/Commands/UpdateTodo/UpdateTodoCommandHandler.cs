@@ -1,6 +1,6 @@
 namespace Application.Todos.Commands.UpdateTodo;
 
-public class UpdateTodoCommandHandler(IApplicationDbContext context) : IRequestHandler<UpdateTodoCommand, Result>
+public class UpdateTodoCommandHandler(IApplicationDbContext context) : ICommandHandler<UpdateTodoCommand>
 {
 	private readonly IApplicationDbContext _context = context;
 

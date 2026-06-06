@@ -1,6 +1,6 @@
 namespace Application.Todos.Queries.GetTodoById;
 
-public class GetTodoByIdQueryHandler(IApplicationDbContext context) : IRequestHandler<GetTodoByIdQuery, Result<TodoResponse>>
+public class GetTodoByIdQueryHandler(IApplicationDbContext context) : IQueryHandler<GetTodoByIdQuery, TodoResponse>
 {
 	private readonly IApplicationDbContext _context = context;
 

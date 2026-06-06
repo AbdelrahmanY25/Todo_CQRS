@@ -1,6 +1,6 @@
 namespace Application.Todos.Queries.GetTodos;
 
-public class GetTodosQueryHandler(IApplicationDbContext context) : IRequestHandler<GetTodosQuery, Result<IEnumerable<TodoResponse>>>
+public class GetTodosQueryHandler(IApplicationDbContext context) : IQueryHandler<GetTodosQuery, IEnumerable<TodoResponse>>
 {
 	private readonly IApplicationDbContext _context = context;
 

@@ -15,11 +15,12 @@ builder.Services
 
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
-builder.Services.AddMediatR(opt => opt.RegisterServicesFromAssembly(typeof(Application.IAssemblyMarker).Assembly));
+builder.Services.AddMediatR(opt => 
+{
+	opt.RegisterServicesFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
+});
 
-builder.Services
-	.AddFluentValidationAutoValidation()
-	.AddValidatorsFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
+builder.Services.AddValidatorsFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
 
 builder.Host.UseSerilog((context, configuration) => 
 	configuration.ReadFrom.Configuration(context.Configuration)

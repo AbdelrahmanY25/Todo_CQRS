@@ -23,4 +23,3 @@ global using Microsoft.AspNetCore.Diagnostics;
 global using MediatR;
 global using FluentValidation;
 global using Infrastructure.Presistance;
-global using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;
