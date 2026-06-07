@@ -1,3 +1,4 @@
+using Application.Behaviors;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,23 +16,21 @@ builder.Services
 
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
-builder.Services.AddMediatR(opt => 
+builder.Services.AddMediatR(configuration => 
 {
-	opt.RegisterServicesFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
+	configuration.RegisterServicesFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
+	configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
 });
 
 builder.Services.AddValidatorsFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
 
 builder.Host.UseSerilog((context, configuration) => 
-	configuration.ReadFrom.Configuration(context.Configuration)
-);
+	configuration.ReadFrom.Configuration(context.Configuration));
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
-{
 	app.MapOpenApi();
-}
 
 app.UseHttpsRedirection();
 
