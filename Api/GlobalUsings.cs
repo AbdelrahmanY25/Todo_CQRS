@@ -2,6 +2,7 @@
 global using API.Extensions;
 
 
+
 global using Application.Behaviors;
 global using Application.Common.Abstractions;
 global using Application.Interfaces.Persistence;
@@ -18,11 +19,13 @@ global using Application.Todos.Queries.GetTodoById;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.AspNetCore.Diagnostics;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 
 
 global using MediatR;
 global using Serilog;
 global using FluentValidation;
+global using HealthChecks.UI.Client;
 global using Infrastructure.Presistance;
 global using SharpGrip.FluentValidation.AutoValidation.Mvc.Extensions;

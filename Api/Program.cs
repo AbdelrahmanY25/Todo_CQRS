@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
+
 builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
@@ -9,7 +11,7 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 builder.Services
-	.AddDbContext<ApplicationDbContext>(op => op.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+	.AddDbContext<ApplicationDbContext>(op => op.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
@@ -25,6 +27,9 @@ builder.Services
 
 builder.Host.UseSerilog((context, configuration) => 
 	configuration.ReadFrom.Configuration(context.Configuration));
+
+builder.Services.AddHealthChecks()
+	.AddSqlServer(name: "Database", connectionString: connectionString);
 
 var app = builder.Build();
 
@@ -42,5 +47,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+	ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+});
 
 app.Run();
