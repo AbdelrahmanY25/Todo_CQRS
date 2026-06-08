@@ -349,3 +349,5 @@ D:\My_Projects\Back End C# Asp .Net\Rest API Projects\Todo_Usings_CQRS\API\bin\D
 D:\My_Projects\Back End C# Asp .Net\Rest API Projects\Todo_Usings_CQRS\API\bin\Debug\net10.0\Serilog.Sinks.Console.dll
 D:\My_Projects\Back End C# Asp .Net\Rest API Projects\Todo_Usings_CQRS\API\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
 D:\My_Projects\Back End C# Asp .Net\Rest API Projects\Todo_Usings_CQRS\API\bin\Debug\net10.0\Serilog.Sinks.File.dll
+D:\My_Projects\Back End C# Asp .Net\Rest API Projects\Todo_Usings_CQRS\API\bin\Debug\net10.0\SharpGrip.FluentValidation.AutoValidation.Mvc.dll
+D:\My_Projects\Back End C# Asp .Net\Rest API Projects\Todo_Usings_CQRS\API\bin\Debug\net10.0\SharpGrip.FluentValidation.AutoValidation.Shared.dll

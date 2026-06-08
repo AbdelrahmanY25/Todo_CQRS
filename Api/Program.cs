@@ -1,6 +1,3 @@
-using Application.Behaviors;
-using Serilog;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -22,7 +19,9 @@ builder.Services.AddMediatR(configuration =>
 	configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
 });
 
-builder.Services.AddValidatorsFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
+builder.Services
+	.AddFluentValidationAutoValidation()
+	.AddValidatorsFromAssembly(typeof(Application.IAssemblyMarker).Assembly);
 
 builder.Host.UseSerilog((context, configuration) => 
 	configuration.ReadFrom.Configuration(context.Configuration));

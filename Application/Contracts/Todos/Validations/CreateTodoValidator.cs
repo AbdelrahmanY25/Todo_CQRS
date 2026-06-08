@@ -1,7 +1,4 @@
-﻿using Application.Contracts.Todos.Requests;
-using FluentValidation;
-
-namespace Application.Contracts.Todos.Validations;
+﻿namespace Application.Contracts.Todos.Validations;
 
 public class CreateTodoValidator : AbstractValidator<CreateTodoRequest>
 {

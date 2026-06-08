@@ -7,10 +7,10 @@ public class TodosController(IMediator mediator) : ControllerBase
 	private readonly IMediator _mediator = mediator;
 
 	[HttpGet]
-	public async Task<IActionResult> GetTodos(CancellationToken cancellationToken)
+	public async Task<IActionResult> GetTodos([FromQuery] RequestFilter requestFilter, CancellationToken cancellationToken)
 	{
 		var result = await _mediator
-			.Send(new GetTodosQuery(), cancellationToken);
+			.Send(new GetTodosQuery(requestFilter), cancellationToken);
 
 		return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
 	}

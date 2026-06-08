@@ -1,12 +1,12 @@
 namespace Application.Todos.Queries.GetTodos;
 
-public class GetTodosQueryHandler(IApplicationDbContext context) : IQueryHandler<GetTodosQuery, IEnumerable<TodoResponse>>
+public class GetTodosQueryHandler(IApplicationDbContext context) : IQueryHandler<GetTodosQuery, PaginatedList<TodoResponse>>
 {
 	private readonly IApplicationDbContext _context = context;
 
-	public async Task<Result<IEnumerable<TodoResponse>>> Handle(GetTodosQuery request, CancellationToken cancellationToken)
+	public async Task<Result<PaginatedList<TodoResponse>>> Handle(GetTodosQuery request, CancellationToken cancellationToken)
 	{
-		var response = await _context.Todos
+		var source = _context.Todos
 			.AsNoTracking()
 			.OrderBy(t => t.Title)
 			.Select(t => new TodoResponse
@@ -15,9 +15,11 @@ public class GetTodosQueryHandler(IApplicationDbContext context) : IQueryHandler
 					t.Title,
 					t.IsCompleted
 				)
-			)
-			.ToListAsync(cancellationToken);
+			);
 
-		return Result.Success<IEnumerable<TodoResponse>>(response);
+		var response = await PaginatedList<TodoResponse>
+			.CreateAsync(source, request.RequestFilter.PageNumber, request.RequestFilter.PageSize, cancellationToken);
+
+		return Result.Success(response);
 	}
 }
